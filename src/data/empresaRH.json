@@ -1,0 +1,16 @@
+{
+    "id": "rh-001",
+    "nome": "Carlos Mendes",
+    "empresa": "Supermercado Bom Preço",
+    "cnpj": "12.345.678/0001-90",
+    "email": "carlos@bompreco.com.br",
+    "compromissoInclusao": true,
+    "dashboard": {
+        "totalVagas": 3,
+        "vagasAtivas": 2,
+        "totalCandidatos": 12,
+        "contratacoes": 4,
+        "taxaRetencao": 87,
+        "pessoasT21Cadastradas": 28
+    }
+}

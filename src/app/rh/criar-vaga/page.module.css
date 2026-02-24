@@ -1,0 +1,262 @@
+.page {
+    padding: 0;
+}
+
+.container {
+    max-width: 860px;
+    padding: 0;
+}
+
+.backLink {
+    display: inline-block;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: var(--space-6);
+}
+
+.backLink:hover {
+    color: var(--color-text-primary);
+}
+
+.title {
+    margin-bottom: var(--space-8);
+}
+
+/* Block Nav */
+.blocoNav {
+    display: flex;
+    gap: var(--space-2);
+    margin-bottom: var(--space-10);
+    overflow-x: auto;
+}
+
+.blocoBtn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-5);
+    background: var(--color-white);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    white-space: nowrap;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+}
+
+.blocoBtn:hover {
+    border-color: var(--color-border-strong);
+}
+
+.blocoActive {
+    border-color: var(--color-text-primary);
+    background-color: var(--color-text-primary);
+    color: var(--color-text-inverse);
+}
+
+.blocoNum {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg-muted);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-sm);
+    font-weight: var(--weight-bold);
+    font-size: var(--text-xs);
+    flex-shrink: 0;
+}
+
+.blocoActive .blocoNum {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-text-inverse);
+}
+
+.blocoLabel {
+    font-weight: var(--weight-medium);
+}
+
+/* Block Section */
+.blocoSection {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-10);
+}
+
+.blocoTitle {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-2);
+}
+
+.blocoDesc {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+    line-height: var(--leading-relaxed);
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+}
+
+.blocoActions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: flex-end;
+    margin-top: var(--space-8);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--color-border);
+}
+
+/* Skills */
+.skillSection {
+    margin-bottom: var(--space-8);
+}
+
+.skillSection h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-4);
+}
+
+.skillGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.skillChip {
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    padding: var(--space-3) var(--space-5);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-white);
+    cursor: pointer;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+    color: var(--color-text-secondary);
+    font-weight: var(--weight-medium);
+}
+
+.skillChip:hover {
+    border-color: var(--color-border-strong);
+}
+
+.skillSelected {
+    border-color: var(--color-primary);
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+/* Ambiente */
+.ambienteGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+}
+
+.ambienteCard {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: border-color var(--transition-fast);
+}
+
+.ambienteCard:hover {
+    border-color: var(--color-border-strong);
+}
+
+.ambienteActive {
+    border-color: var(--color-success);
+    background-color: var(--color-success-light);
+}
+
+.ambienteCard input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    accent-color: var(--color-success);
+    flex-shrink: 0;
+}
+
+.ambienteCardContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.ambienteCardContent strong {
+    font-size: var(--text-sm);
+}
+
+.ambienteCardContent span {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.seloPreview {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    background-color: var(--color-success-light);
+    border: 1px solid var(--color-success-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-5);
+    margin-top: var(--space-6);
+    flex-wrap: wrap;
+}
+
+.seloPreview p {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    flex: 1;
+    min-width: 200px;
+}
+
+/* Description Dual */
+.descDual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+}
+
+.simplifiedPreview {
+    background-color: var(--color-primary-light);
+    border: 1px solid var(--color-primary-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-5);
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--color-text-primary);
+    min-height: 100px;
+}
+
+@media (max-width: 768px) {
+
+    .formGrid,
+    .ambienteGrid,
+    .descDual {
+        grid-template-columns: 1fr;
+    }
+
+    .blocoSection {
+        padding: var(--space-6);
+    }
+
+    .blocoNav {
+        gap: var(--space-1);
+    }
+
+    .blocoLabel {
+        display: none;
+    }
+}

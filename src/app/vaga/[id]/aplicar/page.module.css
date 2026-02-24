@@ -1,0 +1,114 @@
+.page {
+    padding: var(--space-12) 0 var(--space-24);
+}
+
+.formContainer {
+    max-width: var(--max-width-form);
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+}
+
+.backLink {
+    display: inline-block;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    margin-bottom: var(--space-8);
+}
+
+.backLink:hover {
+    color: var(--color-text-primary);
+}
+
+.formHeader {
+    margin-bottom: var(--space-10);
+}
+
+.formHeader h1 {
+    margin-bottom: var(--space-2);
+}
+
+.formHeader p {
+    font-size: var(--text-lg);
+}
+
+.lgpdSection {
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.lgpdBadge {
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+/* Success State */
+.successContainer {
+    max-width: var(--max-width-form);
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+    text-align: center;
+}
+
+.successIcon {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-bold);
+    margin: 0 auto var(--space-6);
+    border: 3px solid var(--color-success-border);
+}
+
+.successContainer h1 {
+    margin-bottom: var(--space-4);
+}
+
+.successContainer>p {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-10);
+}
+
+.emailPreview {
+    text-align: left;
+    margin-bottom: var(--space-8);
+}
+
+.emailPreview h3 {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-3);
+}
+
+.emailCard {
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+}
+
+.emailCard p {
+    font-size: var(--text-sm);
+    margin-bottom: var(--space-2);
+}
+
+.successActions {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: var(--space-8);
+}

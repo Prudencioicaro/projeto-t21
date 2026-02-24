@@ -1,0 +1,28 @@
+.page {
+    padding: 0;
+}
+
+.container {
+    max-width: var(--max-width-form);
+    padding: 0;
+}
+
+.formHeader {
+    margin-bottom: var(--space-10);
+}
+
+.formHeader h1 {
+    margin-bottom: var(--space-3);
+}
+
+.formHeader p {
+    font-size: var(--text-lg);
+}
+
+.compromisso {
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-top: var(--space-2);
+}

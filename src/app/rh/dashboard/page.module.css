@@ -1,0 +1,150 @@
+.page {
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.loginPrompt {
+    max-width: var(--max-width-form);
+    margin: 0 auto;
+    padding: var(--space-16) var(--space-6) 0;
+    text-align: center;
+}
+
+.loginPrompt h1 {
+    margin-bottom: var(--space-4);
+}
+
+.loginPrompt p {
+    font-size: var(--text-lg);
+}
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+    flex-wrap: wrap;
+}
+
+.topBar h1 {
+    margin-bottom: var(--space-1);
+}
+
+.welcome {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+.sectionTitle {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-6);
+}
+
+/* Impact Stats */
+.impactSection {
+    margin-bottom: var(--space-16);
+}
+
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+
+.statCard {
+    background-color: var(--color-bg-subtle);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.statNum {
+    font-family: var(--font-heading);
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-bold);
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+.statLabel {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+/* Vagas List */
+.vagasList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.vagaRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-6);
+    padding: var(--space-5) var(--space-6);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: border-color var(--transition-fast);
+    flex-wrap: wrap;
+}
+
+.vagaRow:hover {
+    border-color: var(--color-border-strong);
+}
+
+.vagaRowInfo {
+    flex: 1;
+    min-width: 200px;
+}
+
+.vagaRowCargo {
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    margin-bottom: var(--space-1);
+}
+
+.vagaRowMeta {
+    font-size: var(--text-xs);
+    color: var(--color-text-muted);
+}
+
+.vagaRowRight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.candidateCount {
+    font-size: var(--text-sm);
+    color: var(--color-text-secondary);
+    font-weight: var(--weight-medium);
+}
+
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vagaRow {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .vagaRowRight {
+        width: 100%;
+        padding-top: var(--space-4);
+        border-top: 1px solid var(--color-border);
+        flex-wrap: wrap;
+    }
+}

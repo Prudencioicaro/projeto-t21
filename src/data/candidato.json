@@ -1,0 +1,70 @@
+{
+    "id": "cand-001",
+    "nome": "Lucas Oliveira",
+    "email": "lucas.oliveira@email.com",
+    "telefone": "(13) 99123-4567",
+    "cidade": "Cubatão, SP",
+    "temT21": "Sim",
+    "precisaApoio": true,
+    "loginMagico": "conecta21.app/entrar/abc123",
+    "candidaturas": [
+        {
+            "vagaId": "vaga-001",
+            "empresa": "Supermercado Bom Preço",
+            "cargo": "Auxiliar de Estoque",
+            "status": "Em análise",
+            "dataAplicacao": "2026-02-12",
+            "timeline": [
+                {
+                    "etapa": "Recebido",
+                    "data": "2026-02-12",
+                    "concluido": true
+                },
+                {
+                    "etapa": "Em análise",
+                    "data": "2026-02-14",
+                    "concluido": true
+                },
+                {
+                    "etapa": "Entrevista agendada",
+                    "data": null,
+                    "concluido": false
+                },
+                {
+                    "etapa": "Resultado",
+                    "data": null,
+                    "concluido": false
+                }
+            ]
+        },
+        {
+            "vagaId": "vaga-005",
+            "empresa": "Restaurante Sabor da Terra",
+            "cargo": "Auxiliar de Cozinha",
+            "status": "Recebido",
+            "dataAplicacao": "2026-02-22",
+            "timeline": [
+                {
+                    "etapa": "Recebido",
+                    "data": "2026-02-22",
+                    "concluido": true
+                },
+                {
+                    "etapa": "Em análise",
+                    "data": null,
+                    "concluido": false
+                },
+                {
+                    "etapa": "Entrevista agendada",
+                    "data": null,
+                    "concluido": false
+                },
+                {
+                    "etapa": "Resultado",
+                    "data": null,
+                    "concluido": false
+                }
+            ]
+        }
+    ]
+}

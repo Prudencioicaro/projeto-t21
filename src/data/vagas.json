@@ -1,0 +1,212 @@
+[
+  {
+    "id": "vaga-001",
+    "empresa": "Supermercado Bom Preço",
+    "logoInicial": "SB",
+    "cargo": "Auxiliar de Estoque",
+    "area": "Logística",
+    "localizacao": "Cubatão, SP",
+    "tipoTrabalho": "Presencial",
+    "jornada": "Segunda a sexta, 6h/dia",
+    "faixaSalarial": "R$ 1.400 – R$ 1.600",
+    "status": "Ativa",
+    "dataCriacao": "2026-02-10",
+    "descricaoFormal": "Auxiliar de estoque responsável pela organização, conferência e controle de mercadorias no depósito, com suporte à equipe de logística.",
+    "descricaoSimplificada": "Você vai ajudar a organizar os produtos no estoque do supermercado. Vai contar os itens e colocar cada coisa no lugar certo.",
+    "habilidadesTecnicas": ["Organização", "Controle de estoque", "Apoio administrativo"],
+    "habilidadesComportamentais": ["Foco em rotina", "Seguir instruções", "Trabalho em equipe"],
+    "ambiente": {
+      "adaptacaoFisica": true,
+      "profissionalApoio": true,
+      "tipoAmbiente": "Dinâmico",
+      "treinamentoInicial": true,
+      "supervisorDesignado": true
+    },
+    "seloInclusivo": true,
+    "nivelSelo": 1,
+    "candidatos": [
+      {
+        "id": "cand-001",
+        "nome": "Lucas Oliveira",
+        "email": "lucas.oliveira@email.com",
+        "telefone": "(13) 99123-4567",
+        "cidade": "Cubatão, SP",
+        "temT21": "Sim",
+        "precisaApoio": true,
+        "status": "Em análise",
+        "dataAplicacao": "2026-02-12",
+        "matchScore": 87
+      },
+      {
+        "id": "cand-002",
+        "nome": "Ana Beatriz Santos",
+        "email": "ana.santos@email.com",
+        "telefone": "(13) 99876-5432",
+        "cidade": "Santos, SP",
+        "temT21": "Sim",
+        "precisaApoio": false,
+        "status": "Recebido",
+        "dataAplicacao": "2026-02-15",
+        "matchScore": 72
+      },
+      {
+        "id": "cand-003",
+        "nome": "Pedro Henrique Lima",
+        "email": "pedro.lima@email.com",
+        "telefone": "(13) 99654-3210",
+        "cidade": "Cubatão, SP",
+        "temT21": "Sim",
+        "precisaApoio": true,
+        "status": "Entrevista agendada",
+        "dataAplicacao": "2026-02-11",
+        "matchScore": 91
+      }
+    ]
+  },
+  {
+    "id": "vaga-002",
+    "empresa": "Padaria Pão Dourado",
+    "logoInicial": "PD",
+    "cargo": "Atendente de Balcão",
+    "area": "Atendimento",
+    "localizacao": "Cubatão, SP",
+    "tipoTrabalho": "Presencial",
+    "jornada": "Segunda a sábado, 5h/dia",
+    "faixaSalarial": "R$ 1.300 – R$ 1.500",
+    "status": "Ativa",
+    "dataCriacao": "2026-02-14",
+    "descricaoFormal": "Profissional de atendimento ao cliente responsável por auxiliar na organização do balcão, atendimento direto ao público e suporte na disposição dos produtos.",
+    "descricaoSimplificada": "Você vai atender as pessoas no balcão da padaria, ajudar a pegar os pães e organizar a vitrine. Vai conversar com os clientes de um jeito simpático.",
+    "habilidadesTecnicas": ["Atendimento", "Organização"],
+    "habilidadesComportamentais": ["Comunicação simples", "Trabalho em equipe", "Foco em rotina"],
+    "ambiente": {
+      "adaptacaoFisica": false,
+      "profissionalApoio": true,
+      "tipoAmbiente": "Atendimento ao público",
+      "treinamentoInicial": true,
+      "supervisorDesignado": true
+    },
+    "seloInclusivo": true,
+    "nivelSelo": 1,
+    "candidatos": [
+      {
+        "id": "cand-004",
+        "nome": "Maria Clara Souza",
+        "email": "maria.clara@email.com",
+        "telefone": "(13) 99111-2233",
+        "cidade": "Cubatão, SP",
+        "temT21": "Sim",
+        "precisaApoio": true,
+        "status": "Aprovado",
+        "dataAplicacao": "2026-02-16",
+        "matchScore": 94
+      }
+    ]
+  },
+  {
+    "id": "vaga-003",
+    "empresa": "Clínica Vida & Saúde",
+    "logoInicial": "CV",
+    "cargo": "Auxiliar Administrativo",
+    "area": "Administração",
+    "localizacao": "Santos, SP",
+    "tipoTrabalho": "Presencial",
+    "jornada": "Segunda a sexta, 6h/dia",
+    "faixaSalarial": "R$ 1.500 – R$ 1.800",
+    "status": "Ativa",
+    "dataCriacao": "2026-02-18",
+    "descricaoFormal": "Auxiliar administrativo responsável pela organização de documentos, apoio ao recebimento de pacientes e controle de agenda.",
+    "descricaoSimplificada": "Você vai ajudar a organizar papéis e documentos da clínica. Também vai ajudar a receber os pacientes e anotar os horários das consultas.",
+    "habilidadesTecnicas": ["Organização", "Apoio administrativo", "Digitação básica"],
+    "habilidadesComportamentais": ["Comunicação simples", "Seguir instruções", "Foco em rotina"],
+    "ambiente": {
+      "adaptacaoFisica": true,
+      "profissionalApoio": false,
+      "tipoAmbiente": "Silencioso",
+      "treinamentoInicial": true,
+      "supervisorDesignado": false
+    },
+    "seloInclusivo": false,
+    "nivelSelo": 0,
+    "candidatos": []
+  },
+  {
+    "id": "vaga-004",
+    "empresa": "Biblioteca Municipal de Cubatão",
+    "logoInicial": "BM",
+    "cargo": "Auxiliar de Biblioteca",
+    "area": "Cultura",
+    "localizacao": "Cubatão, SP",
+    "tipoTrabalho": "Presencial",
+    "jornada": "Segunda a sexta, 4h/dia",
+    "faixaSalarial": "R$ 1.200 – R$ 1.400",
+    "status": "Em seleção",
+    "dataCriacao": "2026-02-05",
+    "descricaoFormal": "Responsável pela organização do acervo, catalogação de livros e atendimento aos frequentadores da biblioteca.",
+    "descricaoSimplificada": "Você vai ajudar a organizar os livros nas estantes, colocar etiquetas e ajudar as pessoas a encontrarem o que procuram na biblioteca.",
+    "habilidadesTecnicas": ["Organização", "Atendimento"],
+    "habilidadesComportamentais": ["Foco em rotina", "Seguir instruções", "Trabalho em equipe"],
+    "ambiente": {
+      "adaptacaoFisica": true,
+      "profissionalApoio": true,
+      "tipoAmbiente": "Silencioso",
+      "treinamentoInicial": true,
+      "supervisorDesignado": true
+    },
+    "seloInclusivo": true,
+    "nivelSelo": 1,
+    "candidatos": [
+      {
+        "id": "cand-005",
+        "nome": "Gabriel Ferreira",
+        "email": "gabriel.f@email.com",
+        "telefone": "(13) 99444-5566",
+        "cidade": "Cubatão, SP",
+        "temT21": "Sim",
+        "precisaApoio": false,
+        "status": "Aprovado",
+        "dataAplicacao": "2026-02-07",
+        "matchScore": 89
+      },
+      {
+        "id": "cand-006",
+        "nome": "Isabela Rodrigues",
+        "email": "isabela.r@email.com",
+        "telefone": "(13) 99777-8899",
+        "cidade": "Santos, SP",
+        "temT21": "Sim",
+        "precisaApoio": true,
+        "status": "Não selecionado",
+        "dataAplicacao": "2026-02-06",
+        "matchScore": 65
+      }
+    ]
+  },
+  {
+    "id": "vaga-005",
+    "empresa": "Restaurante Sabor da Terra",
+    "logoInicial": "RS",
+    "cargo": "Auxiliar de Cozinha",
+    "area": "Alimentação",
+    "localizacao": "Cubatão, SP",
+    "tipoTrabalho": "Presencial",
+    "jornada": "Segunda a sexta, 5h/dia",
+    "faixaSalarial": "R$ 1.300 – R$ 1.500",
+    "status": "Ativa",
+    "dataCriacao": "2026-02-20",
+    "descricaoFormal": "Auxiliar de cozinha responsável por apoio na preparação de alimentos, organização de utensílios e manutenção da limpeza do ambiente.",
+    "descricaoSimplificada": "Você vai ajudar na cozinha do restaurante: lavar e organizar os utensílios, preparar ingredientes simples e manter tudo limpo e arrumado.",
+    "habilidadesTecnicas": ["Organização", "Apoio administrativo"],
+    "habilidadesComportamentais": ["Seguir instruções", "Foco em rotina", "Trabalho em equipe"],
+    "ambiente": {
+      "adaptacaoFisica": false,
+      "profissionalApoio": true,
+      "tipoAmbiente": "Dinâmico",
+      "treinamentoInicial": true,
+      "supervisorDesignado": true
+    },
+    "seloInclusivo": true,
+    "nivelSelo": 1,
+    "candidatos": []
+  }
+]

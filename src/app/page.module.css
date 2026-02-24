@@ -1,0 +1,613 @@
+/* ── HERO ── */
+.hero {
+  padding: var(--space-20) 0 0;
+  background-color: var(--color-bg);
+}
+
+.heroInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.heroContent {
+  max-width: 600px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-primary-subtle);
+  margin-bottom: var(--space-6);
+}
+
+.heroTitle {
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.035em;
+  margin-bottom: var(--space-6);
+  line-height: 1.08;
+}
+
+.heroHighlight {
+  color: var(--color-text-secondary);
+}
+
+.heroDesc {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+.heroActions {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Hero Visual */
+.heroVisual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.heroCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.heroCardTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.heroCardAvatar {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-xs);
+  flex-shrink: 0;
+}
+
+.heroCardTop strong {
+  font-size: var(--text-sm);
+  display: block;
+  color: var(--color-text-primary);
+}
+
+.heroCardTop span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.heroCardMatch {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background-color: var(--color-bg-subtle);
+  border-radius: var(--radius-md);
+}
+
+.matchCircle {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-success);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+.matchCircle small {
+  font-size: 0.65em;
+}
+
+.heroCardMatch span {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+}
+
+.heroCardBadges {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+/* Stats Bar */
+.heroStatsBar {
+  margin-top: var(--space-16);
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-8) 0;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.statNumber {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+}
+
+.statLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+}
+
+.statDivider {
+  width: 1px;
+  height: 36px;
+  background-color: var(--color-border);
+}
+
+/* ── WALKTHROUGH ── */
+.walkthrough {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg-subtle);
+}
+
+.stepsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.stepCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  position: relative;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stepCard:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.stepIconWrap {
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.stepNum {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-muted);
+}
+
+.stepTitle {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-tight);
+}
+
+.stepText {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.walkthroughCTA {
+  text-align: center;
+  margin-top: var(--space-10);
+}
+
+/* ── TESTIMONIAL ── */
+.testimonial {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg);
+}
+
+.quoteWrap {
+  position: relative;
+  text-align: center;
+}
+
+.quoteGlyph {
+  font-family: var(--font-heading);
+  font-size: 8rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-bg-muted);
+  line-height: 0.6;
+  display: block;
+  margin-bottom: var(--space-4);
+  user-select: none;
+}
+
+.quote {
+  position: relative;
+}
+
+.quoteText {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin-bottom: var(--space-8);
+  letter-spacing: -0.01em;
+}
+
+.quoteAuthor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.quoteAvatar {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.quoteAuthor strong {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.quoteAuthor span {
+  display: block;
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* ── VAGAS ── */
+.vagasSection {
+  padding: var(--space-24) 0;
+  background-color: var(--color-bg-subtle);
+}
+
+.vagasGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.vagaCard {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  position: relative;
+}
+
+.vagaCard:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--shadow-card);
+}
+
+.vagaFeatured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  padding: var(--space-10);
+  border-color: var(--color-primary-subtle);
+  background-color: var(--color-primary-light);
+}
+
+.vagaFeatured:hover {
+  border-color: var(--color-primary);
+}
+
+.vagaSelo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--color-success);
+  margin-bottom: var(--space-1);
+}
+
+.vagaCardTop {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.vagaLogo {
+  width: 48px;
+  height: 48px;
+  background-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+.vagaInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.vagaCargo {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  margin-bottom: 2px;
+}
+
+.vagaEmpresa {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.vagaMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.metaItem {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.vagaDesc {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.vagaSalario {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-success);
+}
+
+.vagaSkills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* ── FOR COMPANIES ── */
+.forCompanies {
+  padding: var(--space-32) 0;
+  background-color: var(--color-bg);
+}
+
+.companiesInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.companiesText h2 {
+  margin-bottom: var(--space-4);
+}
+
+.companiesDesc {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-6);
+}
+
+.companiesList {
+  list-style: none;
+  margin-bottom: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.companiesList li {
+  font-size: var(--text-base);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.companiesVisual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dashPreview {
+  background-color: var(--color-bg-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  width: 100%;
+  max-width: 380px;
+  box-shadow: var(--shadow-md);
+}
+
+.dashHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dashHeader strong {
+  font-size: var(--text-base);
+}
+
+.dashStats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.dashStat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dashNum {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.03em;
+}
+
+.dashLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: var(--weight-medium);
+}
+
+/* ── Responsive ── */
+@media (max-width: 968px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .heroVisual {
+    justify-content: center;
+  }
+
+  .heroCard {
+    max-width: 360px;
+  }
+
+  .stepsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vagaFeatured {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--space-12) 0 0;
+  }
+
+  .heroInner {
+    text-align: center;
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroActions {
+    justify-content: center;
+  }
+
+  .heroStats {
+    gap: var(--space-8);
+  }
+
+  .stepsRow {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .vagasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .companiesInner {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+
+  .companiesVisual {
+    justify-content: center;
+  }
+
+  .quoteGlyph {
+    font-size: 5rem;
+  }
+}
