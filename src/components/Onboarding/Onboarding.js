@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import styles from './Onboarding.module.css';
 
 const STEPS = [
@@ -22,7 +22,7 @@ const STEPS = [
         position: 'top',
     },
     {
-        target: '#vagas .btn--accent',
+        target: '#vagas a.btn--accent',
         title: 'Candidate-se!',
         text: 'Quando encontrar uma vaga que goste, clique em "Quero me candidatar". Você não precisa criar conta antes.',
         position: 'top',
@@ -35,6 +35,7 @@ export default function Onboarding() {
     const [spotlightStyle, setSpotlightStyle] = useState({});
     const [tooltipStyle, setTooltipStyle] = useState({});
     const [dismissed, setDismissed] = useState(false);
+    const tooltipRef = useRef(null);
 
     const positionTooltip = useCallback(() => {
         if (!visible || dismissed) return;
@@ -47,37 +48,69 @@ export default function Onboarding() {
         const rect = el.getBoundingClientRect();
         const scrollY = window.scrollY;
         const padding = 12;
+        const isMobile = window.innerWidth <= 768;
 
+        // Spotlight positioning
         setSpotlightStyle({
             top: `${rect.top + scrollY - padding}px`,
             left: `${rect.left - padding}px`,
             width: `${rect.width + padding * 2}px`,
             height: `${rect.height + padding * 2}px`,
+            opacity: 1
         });
 
-        const tooltipWidth = Math.min(380, window.innerWidth - 32);
-        let tooltipTop, tooltipLeft;
+        const tooltipWidth = Math.min(400, window.innerWidth - 32);
 
-        if (step.position === 'bottom') {
-            tooltipTop = rect.bottom + scrollY + 20;
-            tooltipLeft = Math.max(16, rect.left + rect.width / 2 - tooltipWidth / 2);
-        } else {
-            tooltipTop = rect.top + scrollY - 200;
-            tooltipLeft = Math.max(16, rect.left + rect.width / 2 - tooltipWidth / 2);
+        // On mobile, keep it fixed at the bottom for better readability
+        if (isMobile) {
+            setTooltipStyle({
+                position: 'fixed',
+                bottom: '20px',
+                left: '16px',
+                right: '16px',
+                width: 'auto',
+                maxWidth: 'none',
+                transform: 'none',
+                zIndex: 10005
+            });
+            return;
         }
 
-        // Keep within viewport
+        // Desktop positioning logic
+        let tooltipTop, tooltipLeft;
+        const tooltipHeight = tooltipRef.current?.offsetHeight || 180;
+
+        // Horizontal center
+        tooltipLeft = Math.max(16, rect.left + rect.width / 2 - tooltipWidth / 2);
         tooltipLeft = Math.min(tooltipLeft, window.innerWidth - tooltipWidth - 16);
+
+        // Vertical: check if it fits where requested, if not flip it
+        const spaceAbove = rect.top;
+        const spaceBelow = window.innerHeight - rect.bottom;
+
+        if (step.position === 'bottom') {
+            if (spaceBelow < tooltipHeight + 40 && spaceAbove > tooltipHeight + 40) {
+                tooltipTop = rect.top + scrollY - tooltipHeight - 20;
+            } else {
+                tooltipTop = rect.bottom + scrollY + 20;
+            }
+        } else {
+            if (spaceAbove < tooltipHeight + 40 && spaceBelow > tooltipHeight + 40) {
+                tooltipTop = rect.bottom + scrollY + 20;
+            } else {
+                tooltipTop = rect.top + scrollY - tooltipHeight - 20;
+            }
+        }
 
         setTooltipStyle({
             top: `${tooltipTop}px`,
             left: `${tooltipLeft}px`,
             width: `${tooltipWidth}px`,
+            position: 'absolute'
         });
     }, [currentStep, visible, dismissed]);
 
     useEffect(() => {
-        // Check if the user has been here before
         const seen = sessionStorage.getItem('conecta21_onboarding');
         if (!seen) {
             const timer = setTimeout(() => setVisible(true), 1500);
@@ -93,8 +126,15 @@ export default function Onboarding() {
 
         const el = document.querySelector(step.target);
         if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            const timer = setTimeout(positionTooltip, 500);
+            // Adjust scroll to leave space for tooltip
+            const isMobile = window.innerWidth <= 768;
+            el.scrollIntoView({
+                behavior: 'smooth',
+                block: isMobile ? 'start' : 'center'
+            });
+
+            // Wait for scroll to finish
+            const timer = setTimeout(positionTooltip, 600);
             return () => clearTimeout(timer);
         }
     }, [currentStep, visible, dismissed, positionTooltip]);
@@ -102,7 +142,11 @@ export default function Onboarding() {
     useEffect(() => {
         if (!visible) return;
         window.addEventListener('resize', positionTooltip);
-        return () => window.removeEventListener('resize', positionTooltip);
+        window.addEventListener('scroll', positionTooltip);
+        return () => {
+            window.removeEventListener('resize', positionTooltip);
+            window.removeEventListener('scroll', positionTooltip);
+        };
     }, [visible, positionTooltip]);
 
     const handleNext = () => {
@@ -125,11 +169,13 @@ export default function Onboarding() {
 
     return (
         <div className={styles.overlay} role="dialog" aria-modal="true" aria-label="Guia de navegação">
-            {/* Spotlight */}
             <div className={styles.spotlight} style={spotlightStyle} />
 
-            {/* Tooltip */}
-            <div className={styles.tooltip} style={tooltipStyle}>
+            <div
+                ref={tooltipRef}
+                className={styles.tooltip}
+                style={tooltipStyle}
+            >
                 <div className={styles.tooltipHeader}>
                     <span className={styles.stepIndicator}>
                         Passo {currentStep + 1} de {STEPS.length}
@@ -159,3 +205,4 @@ export default function Onboarding() {
         </div>
     );
 }
+
